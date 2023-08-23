@@ -1,4 +1,8 @@
 steps:
 - name: 'python:3.11'
   entrypoint: 'bash'
-  args: ['-c', 'pytest test_graph_test.py']
+  args:
+    - '-c'
+    - |
+      pip install pytest
+      pytest test_graph_test.py
